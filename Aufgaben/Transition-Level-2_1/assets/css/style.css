@@ -10,17 +10,26 @@ body {
     left: 50%;
     transform: translate(-50%, 50%);
     background: url('../img/neom-RySPDa0FdcQ-unsplash.jpg') center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .div__child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.0);
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    transition: all 2s 0.2s ease-in;
 }
 
 .div__child p {
     font-size: 2rem;
     color: white;
-    /* visibility: hidden; */
+}
+
+.div__parent:hover .div__child {
+    background-color: rgba(0,0,0, 0.2);
+    visibility: visible;
+    
 }
