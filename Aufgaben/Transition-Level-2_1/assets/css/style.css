@@ -1,0 +1,26 @@
+body {
+    position: relative;
+}
+
+.div__parent {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background: url('../img/neom-RySPDa0FdcQ-unsplash.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div__child {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.div__child p {
+    font-size: 2rem;
+    color: white;
+    /* visibility: hidden; */
+}
