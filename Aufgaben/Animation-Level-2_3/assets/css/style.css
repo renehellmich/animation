@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div img {
+    width: 320px;
+}
+
+img:hover {
+    animation: puls 5s linear 0.2s infinite forwards;
+    /* box-shadow: -16px -16px 32px 0px red, 16px 16px 32px 0px green; */
+}
+
+@keyframes puls {
+    0% {
+        box-shadow: 0 0 32px 12px white;
+    }
+    25% {
+        box-shadow: 16px 16px 32px 0px red;
+    }
+    50% {
+        box-shadow: -16px -16px 32px 0px blue;
+    }
+    75%{
+        box-shadow: -16px -16px 32px 0px red, 16px 16px 32px 0px green;
+    }
+    100% {
+        box-shadow: 0 0 32px 12px white;
+    }
+}
