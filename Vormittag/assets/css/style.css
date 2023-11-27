@@ -1,0 +1,177 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.transform div {
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 1s 0.1s ease-out;
+    /* ! Background color schnell, Color, langsam */
+    transform-origin: 0% 0%;
+    /* ! Der Ursprung bleibt 0 und 0 */
+    /* transition-property: all;
+    transition-duration: 2s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-out; */
+}
+
+.transform div:hover {
+    color: blue;
+    background-color: green;
+    /* transform: translateX(-50px);
+    transform: translate(50px, 100px);
+    transform: translateY(-100px); */
+    transform: rotateZ(-90deg);
+    transform: scaleX(2);
+    transform: scale(2, 4);
+
+    /* transform: skew(15deg, 30deg); */
+
+    transform: translate(50px, 100px) rotate(110deg);
+}
+
+.animation {
+    background-color: red;
+    height: 500px;
+    width: 500px;
+}
+
+.animation div {
+    height: 50%;
+    width: 50%;
+    background-color: purple;
+    animation: move 5s linear 0.3s infinite reverse;
+    
+    /* animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    
+}
+@keyframes move {
+    0% {
+        background-color: green;
+    }
+    33% {
+        background-color: pink;
+        transform: translateY(100%);
+    }
+    66% {
+        background-color: brown;
+        transform: translate(100%, 100%);
+    }
+    100% {
+        background-color: blue;
+        transform: translateX(100%);
+    }
+}
+
+.loader__section {
+    display: flex;
+    gap: 10px;
+}
+
+.loader__section div {
+    background-color: gold;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.loader__section div:nth-of-type(1) {
+    animation: loader 3s infinite ease-in-out;
+}
+.loader__section div:nth-of-type(2) {
+    animation: loader 3s 0.3s infinite ease-in-out;
+}
+.loader__section div:nth-of-type(3) {
+    animation: loader 3s 0.3s infinite ease-in-out;
+}
+.loader__section div:nth-of-type(4) {
+    animation: loader 3s 0.5s infinite ease-in-out;
+}
+
+
+@keyframes loader {
+    0% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY(10px);
+        background-color: red;
+    }
+    66% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+    
+}
+
+.last__section {
+    height: 100vh;
+}
+
+.last__section div {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    transition: all 1s 0.2s ease-in-out;
+}
+
+.last__section div:hover {
+    /* transform: translateY(200px);
+    transform: translateX(200px);
+    transform: rotateZ(720deg); */
+    background-color: green;
+    transform: translate(200px, 200px) scale(3) rotateZ(720deg);
+}
+
+.last__animation {
+    height: 600px;
+    width: 600px;
+    background-color: green;
+}
+
+.last__animation div{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin: 10px;
+    animation: kreis 5s 0.3s infinite forwards;
+}
+
+.last__animation div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes kreis {
+    0% {
+        transform: translate(0)
+    }
+    33% {
+        transform: translateX(550px) scale(1.5);
+        background-color: blue;
+    }
+    66% {
+        transform: translateY(550px);
+    }
+    100% {
+        transform: translate(0);
+        background-color: red;
+    }
+}

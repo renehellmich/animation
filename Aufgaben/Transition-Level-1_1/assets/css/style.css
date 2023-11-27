@@ -1,0 +1,29 @@
+.sc__transition {
+    background-color: grey;
+    width: 100vw;
+    height: 80px;
+}
+
+.sc__transition div {
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    transition: width 2s 0.2s ease-in-out;
+}
+
+.sc__transition div:hover {
+    animation: hinher 5s 0.2s 1 forwards;
+}
+
+@keyframes hinher {
+    0% {
+        width: 40px;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 40px;
+    }
+}
+
